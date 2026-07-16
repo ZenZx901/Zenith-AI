@@ -1,0 +1,23 @@
+{
+  "short_name": "Zenith AI",
+  "name": "Zenith AI Workspace",
+  "icons": [
+    {
+      "src": "https://api.dicebear.com/7.x/bottts/svg?seed=Zenith",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://api.dicebear.com/7.x/bottts/svg?seed=Zenith&backgroundType=solid&backgroundColor=0e1121",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0E1121",
+  "theme_color": "#00E5FF",
+  "display": "standalone",
+  "orientation": "portrait",
+  "id": "/"
+}

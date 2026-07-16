@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #05060A;
+}
+
+/* Light theme overrides */
+.theme-light {
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+}
+
+.theme-light .bg-\[\#080A12\],
+.theme-light .bg-gray-950,
+.theme-light .bg-black {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+.theme-light .bg-\[\#0E1121\],
+.theme-light .bg-\[\#11152B\],
+.theme-light .bg-\#0E1121 {
+  background-color: #f3f4f6 !important;
+  border-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+.theme-light .text-white,
+.theme-light .text-gray-200,
+.theme-light .text-gray-300 {
+  color: #111827 !important;
+}
+
+.theme-light .text-gray-400 {
+  color: #4b5563 !important;
+}
+
+.theme-light .text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.theme-light .border-gray-800,
+.theme-light .border-gray-850,
+.theme-light .border-gray-900 {
+  border-color: #e5e7eb !important;
+}
+
+.theme-light .bg-gray-900 {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+  border-color: #e5e7eb !important;
+}
+
+.theme-light .bg-\[\#0F1225\],
+.theme-light .bg-\[\#161B3B\],
+.theme-light .bg-\[\#0E1121\]\/60 {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+.theme-light .bg-gray-900\/60,
+.theme-light .bg-gray-950\/60,
+.theme-light .bg-gray-950\/70 {
+  background-color: #f9fafb !important;
+  border-color: #e5e7eb !important;
+  color: #111827 !important;
+}
+
+.theme-light .text-cyan-400,
+.theme-light .text-\[\#00E5FF\] {
+  color: #0284c7 !important; /* sky-600 */
+}
+
+.theme-light .text-pink-400,
+.theme-light .text-\[\#FF2DAA\] {
+  color: #db2777 !important; /* pink-600 */
+}
+
+.theme-light .border-\[\#FF2DAA\]\/40,
+.theme-light .border-pink-500\/15,
+.theme-light .border-pink-500\/30 {
+  border-color: #fbcfe8 !important; /* pink-200 */
+}
+
+.theme-light .bg-pink-950\/40 {
+  background-color: #fce7f3 !important;
+  color: #db2777 !important;
+}
+
+.theme-light .bg-cyan-950\/40 {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+}
+
+.theme-light .bg-purple-950\/40 {
+  background-color: #f3e8ff !important;
+  color: #7e22ce !important;
+}
+
+.theme-light input {
+  background-color: #ffffff !important;
+  border-color: #d1d5db !important;
+  color: #111827 !important;
+}
+
+.theme-light input::placeholder {
+  color: #9ca3af !important;
+}
+
+.theme-light .scrollbar-none {
+  scrollbar-width: none;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+.theme-light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+/* Onboarding Flow Light adjustments */
+.theme-light #onboarding-flow {
+  background-color: #f9fafb !important;
+}
+.theme-light #onboarding-flow .bg-gradient-to-b,
+.theme-light #onboarding-flow .bg-gradient-to-tr {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 13, 23, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.4);
+}
+
+/* Custom keyframes & animation helpers */
+@keyframes pulse-cyan {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(0, 229, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(0, 229, 255, 0.8), 0 0 16px rgba(0, 229, 255, 0.4);
+  }
+}
+
+.glow-cyan {
+  animation: pulse-cyan 3s infinite;
+}
+

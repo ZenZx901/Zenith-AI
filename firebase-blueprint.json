@@ -1,0 +1,72 @@
+{
+  "collections": {
+    "users": {
+      "schema": {
+        "uid": "string",
+        "email": "string",
+        "displayName": "string",
+        "photoURL": "string",
+        "currentTier": "string",
+        "usagePools": "object",
+        "createdAt": "timestamp"
+      },
+      "indexes": []
+    },
+    "sessions": {
+      "schema": {
+        "sessionId": "string",
+        "uid": "string",
+        "name": "string",
+        "mode": "string",
+        "selectedModels": "array",
+        "createdAt": "timestamp"
+      },
+      "indexes": [
+        {
+          "fields": [
+            { "field": "uid", "order": "ASCENDING" },
+            { "field": "createdAt", "order": "DESCENDING" }
+          ]
+        }
+      ]
+    },
+    "messages": {
+      "schema": {
+        "messageId": "string",
+        "sessionId": "string",
+        "uid": "string",
+        "role": "string",
+        "content": "string",
+        "timestamp": "timestamp",
+        "tokensUsed": "number",
+        "model": "string"
+      },
+      "indexes": [
+        {
+          "fields": [
+            { "field": "sessionId", "order": "ASCENDING" },
+            { "field": "timestamp", "order": "ASCENDING" }
+          ]
+        }
+      ]
+    },
+    "files": {
+      "schema": {
+        "fileId": "string",
+        "uid": "string",
+        "name": "string",
+        "size": "number",
+        "type": "string",
+        "createdAt": "timestamp"
+      },
+      "indexes": []
+    },
+    "promocodes": {
+      "schema": {
+        "code": "string",
+        "claimCount": "number"
+      },
+      "indexes": []
+    }
+  }
+}

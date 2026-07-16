@@ -1,0 +1,6 @@
+{
+  "name": "Zenith AI",
+  "description": "An Android-simulated full-stack workspace aggregating 34 AI models with 6 advanced chat modes under a cyberpunk aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
